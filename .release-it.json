@@ -1,13 +1,14 @@
 {
   "npm": {
-    "publish": false
+    "publish": true,
+    "access": "public"
   },
   "git": {
     "commitMessage": "chore(release): ${version}"
   },
   "github": {
-    "release": true,
-    "draft": true
+    "release": false,
+    "draft": false
   },
   "plugins": {
     "@release-it/conventional-changelog": {
