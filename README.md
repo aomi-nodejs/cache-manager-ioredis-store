@@ -1,13 +1,25 @@
 # Redis store for node cache manager
 
-[![npm version](https://badge.fury.io/js/cache-manager-ioredis-yet.svg)](https://www.npmjs.com/package/cache-manager-ioredis-yet) [![codecov](https://codecov.io/gh/node-cache-manager/node-cache-manager-ioredis-yet/branch/master/graph/badge.svg?token=NX28S97MDF)](https://codecov.io/gh/node-cache-manager/node-cache-manager-ioredis-yet)
-
 Redis cache store for [node-cache-manager](https://github.com/node-cache-manager/node-cache-manager).
 
 ## Installation
 
 ```sh
-pnpm install cache-manager-ioredis-yet
+yarn add @aomi/cache-manager-ioredis-store
+```
+
+## Usage
+
+```typescript
+import { redisStore } from '@aomi/cache-manager-ioredis-store';
+import Redis from 'ioredis';
+
+import { redisClient } from './redis';
+
+// use exists redis client
+redisStore({
+  redis: redisClient,
+});
 ```
 
 ## License

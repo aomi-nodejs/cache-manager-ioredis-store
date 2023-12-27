@@ -1,5 +1,5 @@
 {
-  "name": "cache-manager-ioredis-yet",
+  "name": "@aomi/cache-manager-ioredis-store",
   "authors": [
     {
       "name": "Matthijs Dabroek",
@@ -11,13 +11,13 @@
     }
   ],
   "description": "Redis store for node-cache-manager updated",
-  "version": "1.2.2",
+  "version": "1.0.0",
   "license": "MIT",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "repository": {
     "type": "git",
-    "url": "https://github.com/node-cache-manager/node-cache-manager-ioredis-yet.git"
+    "url": "https://github.com/aomi-nodejs/cache-manager-ioredis-store"
   },
   "keywords": [
     "cache-manager",
@@ -28,10 +28,10 @@
   "scripts": {
     "build": "rm -rf dist && tsc -p tsconfig.build.json",
     "test:watch": "vitest test.ts",
-    "test": "pnpm test:watch --run",
-    "release": "pnpm check && pnpm test && pnpm build && dotenv release-it",
-    "fix": "pnpm lint && pnpm fmt",
-    "check": "pnpm lint:check && pnpm fmt:check",
+    "test": "yarn test:watch --run",
+    "release": "yarn check && yarn test && yarn build && dotenv release-it",
+    "fix": "yarn lint && yarn fmt",
+    "check": "yarn lint:check && yarn fmt:check",
     "lint": "eslint --cache --fix '**/*.{ts,js}'",
     "fmt": "prettier --write '**/*.{md,prisma,json}'",
     "lint:check": "eslint --cache --max-warnings 0 '**/*.{ts,js}'",
